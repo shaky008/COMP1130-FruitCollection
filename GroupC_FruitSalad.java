@@ -2,6 +2,12 @@ package comp1130;
 
 import java.util.Scanner;
 
+enum Toppings {
+        WHIPPED_CREAM,
+        CHOCOLATE,
+        LEMON_JUICE,
+}
+
 public class GroupC_FruitSalad {
 
     public static void main(String[] args) {
@@ -9,6 +15,7 @@ public class GroupC_FruitSalad {
         Grape gp = new Grape();
         Orange og = new Orange();
         int counter = 0;
+        int toppings;
 
         //while loop begins
         String verify = "Y";
@@ -18,6 +25,10 @@ public class GroupC_FruitSalad {
             gp.setWeight(sc.nextFloat());            //Input weight for grapes by user
             System.out.println("How many grams of oranges would you like?");
             og.setWeight(sc.nextFloat());            //Input weight for oranges by user
+            
+            System.out.println("chose your toppings from down below:");
+            System.out.println(" Select 1) Wip cream  2) Chocolate  3) Lemon juice");
+            toppings = sc.nextInt();
 
             //Total math calculation
             float total = gp.getWeight() + og.getWeight();
@@ -45,6 +56,17 @@ public class GroupC_FruitSalad {
                     }
                 }
             }
+            
+                if (toppings ==1) {
+                    System.out.println("\n You added " + Toppings.WHIPPED_CREAM + " on your salad");
+                }else if(toppings == 2){
+                    System.out.println("\n You added " + Toppings.CHOCOLATE + " on your salad");
+                }else if (toppings == 3){
+                    System.out.println("\n you added " +Toppings.LEMON_JUICE + " on your salad" );
+                }else{
+                    System.out.println("\n No toppings selected");
+                }
+            
             System.out.println("\nWould you like to order another salad?(Y/N)");
             verify = sc.next();
             counter++;
