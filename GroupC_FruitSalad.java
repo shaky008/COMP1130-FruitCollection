@@ -56,4 +56,6 @@ public class GroupC_FruitSalad {
         System.out.println("You have ordered "+counter+" salads");
         System.out.println("Have a great day ahead:)");
     }
+
+
 }
